@@ -48,3 +48,69 @@ set4=set1&set2
 print(set4)
 set5=set1-set2
 print(set5)
+
+
+##frozenset
+
+print("frozenset")
+fset1=frozenset([3,8,13,20,4,10,44])
+fset2=frozenset([30,29,13,1,49,44])
+print(fset1)
+print(fset2)
+print(20 in fset1)
+print(100 in fset2)
+fset3=fset1.union(fset2)
+print("union")
+print(fset3)
+fset4=fset1.intersection(fset2)
+print("intersection")
+print(fset4)
+fset5=fset1.difference(fset2)
+print("difference")
+print(fset5)
+
+##dictionary
+
+print("dictionary")
+dict={'name':'aadhi','age':8,'place':'dubai','occupation':'student','ph':12334445}
+print(dict)
+print(dict["name"])
+print(dict["age"])
+print(dict["occupation"])
+dict["place"]='qatar'
+print(dict["place"])
+removed_value=dict.pop("ph")
+print("removed value is  ",removed_value)
+key=dict.keys()
+value=dict.values()
+item=dict.items()
+print("keys are  ",key)
+print("values are  ",value)
+print("items are   ",item)
+age=dict.get('age')
+print(age)
+##dictionary update
+dict1={"name":'abc','age':21,'pincode':1234,"place":"ekm"}
+dict2={"name":'efgh','age':23,'pincode':5678}
+dict1.update(dict2)
+print(dict1)
+dict3={'name':'anu','age':20}
+dict1.update(dict3)
+print(dict1)
+ud1={'a':1,'b':9,'c':7}
+ud2={"b":6,'h':78,'i':5}
+ud3={**ud1,**ud2}
+print(ud3)
+##checking key exist
+if 'a' in ud1:
+    print('a exist')
+if 'h'in ud2:
+    print('h exist')
+ud3.clear()
+print(ud3)
+##dictionary comprehensive
+squarednum={x:x**2 for x in range(8)}
+print(squarednum)
+
+sqevennum={x:x**2 for x in range(10) if x%2==0}
+print(sqevennum)
